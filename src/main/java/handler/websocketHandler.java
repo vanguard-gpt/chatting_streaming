@@ -1,14 +1,13 @@
 package handler;
 
-import lombok.extern.slf4j.XSlf4j;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 
-@XSlf4j
+@Slf4j
 @Component
 public class websocketHandler extends TextWebsocketHandler {
-
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage textMessage) throws Exception{
         String payload = textMessage.getPayload();
